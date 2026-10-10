@@ -1,0 +1,6 @@
+mixin nav-menu(items)
+    nav
+        ul.flex
+            each item in items
+                li
+                    a(href=item.link)= item.name

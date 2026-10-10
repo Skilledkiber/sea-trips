@@ -1,0 +1,38 @@
+include components/mixins.pug
+include components/variables.pug
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="css/styles.css")
+        title Sea Trips
+    body 
+        header.container-fluid.text-center
+            .wrapper.container
+                .header-head.row
+                    .logo.col-12.col-md-4.text-start
+                        picture
+                            source(srcset="img/logo.png", type="image/png")
+                            img(src="img/logo.png", alt="Sea Trips Logo")
+                    .nav-function.col-12.col-md-8
+                        +nav-menu(menu)
+                .header-body.row
+                    span.span1
+                    h1.header-title.col-12
+                        | Морські пригоди
+                    p.header-subtitle.col-12.mx-auto
+                        |Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                    span.span2
+                        a.button.mx-auto(href="#")
+                            |Детальніше
+                .header-footer.text-center
+                    h2.header-footer-title.mx-auto Обери свій план подорожі
+                    p.header-footer-subtitle Наша фірма - лідер на ринку у своїй сфері
+                    a.arrows(href="") 
+                        span.arrow.mx-auto
+                        span.arrow.mx-auto
